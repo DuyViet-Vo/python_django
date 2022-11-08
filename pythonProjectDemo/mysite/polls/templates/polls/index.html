@@ -1,21 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'polls/base.html'  %}
+
+{% block content %}
     <h1>Xin chào mình là {{name}}</h1>
     <p>Việt đã có ny</p>
     <h2>tài sản mà tôi đang có:</h2>
 
     <ul>
         {% for i in possession %}
-        <li>{{i}}</li>
+            {% if i != 'Máy tính'%}
+                <li>{{i}}</li>
+            {% endif %}
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}
