@@ -10,7 +10,11 @@ def index(request):
     context = {"name": myname, 'possession': taisan}
     return render(request, "polls/index.html", context)
 
+
 def viewList(request):
     list_question = Question.objects.all()
     context1 = {"dsquestions": list_question}
     return render(request, "polls/question_list.html", context1)
+
+def datailView(request ,question_id):
+   q =  Question.objects.get(pk= question_id)
