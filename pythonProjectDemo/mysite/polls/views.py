@@ -16,5 +16,7 @@ def viewList(request):
     context1 = {"dsquestions": list_question}
     return render(request, "polls/question_list.html", context1)
 
-def datailView(request ,question_id):
-   q =  Question.objects.get(pk= question_id)
+
+def detailView(request, question_id):
+    q = Question.objects.get(pk=question_id)
+    return render(request, "polls/detail_question.html", {"qs": q})
