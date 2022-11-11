@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 from .models import *
 # Create your views here.
 
@@ -19,4 +19,5 @@ def viewList(request):
 
 def detailView(request, question_id):
     q = Question.objects.get(pk=question_id)
-    return render(request, "polls/detail_question.html", {"qs": q})
+    return render(request, "polls/detail_question.html", {"questionpk": q})
+    
