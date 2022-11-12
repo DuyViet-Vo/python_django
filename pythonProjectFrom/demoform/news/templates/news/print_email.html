@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <table>
+        <tr>
+            <td> Title</td>
+            <td>Content</td>
+            <td>Email</td>
+            <td> CC </td>
+        </tr>
+       <tr>
+            <td>{{ td }}</td>
+            <td>{{ nd }}</td>
+            <td>{{ e }}</td>
+            <td>{{ c }}</td>
+        </tr>
+
+    </table>
+</body>
+</html>
